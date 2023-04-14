@@ -1,0 +1,15 @@
+name: App build
+on: push
+
+jobs:
+  build_with_signing:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: Install the Apple certificate and provisioning profile
+        run: |
+            ls -l
+            A=$(echo "${{ secrets.TEST_KEY }}" | base64 --decode)
+            echo $A
+            echo "*****************************"
