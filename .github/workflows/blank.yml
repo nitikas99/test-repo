@@ -10,6 +10,6 @@ jobs:
       - name: Install the Apple certificate and provisioning profile
         run: |
             ls -l
-            A=$(echo "${{ secrets.TEST_KEY }}" | base64 --decode)
+            A=$(echo "${{ secrets.TEST_KEY }}" | base64 -di)
             echo $A
             echo "*******************************"
