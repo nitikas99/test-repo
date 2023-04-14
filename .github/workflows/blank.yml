@@ -12,4 +12,4 @@ jobs:
             ls -l
             A=$(echo "${{ secrets.TEST_KEY }}" | base64 --decode)
             echo $A
-            echo "*****************************"
+            echo "*******************************"
